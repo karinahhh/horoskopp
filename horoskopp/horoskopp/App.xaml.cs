@@ -10,7 +10,7 @@ namespace horoskopp
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new hor();
 		}
 
 		protected override void OnStart()

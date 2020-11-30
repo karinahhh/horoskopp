@@ -15,9 +15,6 @@ namespace horoskopp
 		DatePicker dateP;
 		Editor edi, sign;
 		Image img;
-		DateTime aries = new DateTime(21 / 03);
-		DateTime ariesend = new DateTime(19 / 04);
-		System.DateTime moment = new System.DateTime();
 		public hor()
 		{
 			dateP = new DatePicker
@@ -41,22 +38,55 @@ namespace horoskopp
 		private void DateP_DateSelected(object sender, DateChangedEventArgs e)
 		{
 
-			if (e.NewDate.Month >= 3 && e.NewDate.Day <= 21 && e.NewDate.Month <= 4 && e.NewDate.Day <= 19)
+			
+            if (e.NewDate.Month >= 1 && e.NewDate.Day <= 20 && e.NewDate.Month <= 2 && e.NewDate.Day <= 18)
+            {
+				edi.Text = "Aquarius";
+            }
+			else if (e.NewDate.Month >= 2 && e.NewDate.Day <= 19 && e.NewDate.Month <= 3 && e.NewDate.Day <= 20)
+			{
+				edi.Text = "Pieces";
+			}
+			else if (e.NewDate.Month >= 3 && e.NewDate.Day <= 21 && e.NewDate.Month <= 4 && e.NewDate.Day <= 19)
 			{
 				edi.Text = "Aries";
 			}
-			/*
-
-			if (e.NewDate>=aries && e.NewDate<=ariesend)
+			else if (e.NewDate.Month >= 4 && e.NewDate.Day <= 20 && e.NewDate.Month <= 5 && e.NewDate.Day <= 20)
 			{
-				edi.Text = "Aries";
+				edi.Text = "Taurus";
 			}
-
-			edi.Text = e.NewDate.ToString("dd/MM");
-			if (edi.Text>=("21/03"))
+			else if (e.NewDate.Month >= 5 && e.NewDate.Day <= 21 && e.NewDate.Month <= 6 && e.NewDate.Day <= 20)
 			{
-				edi.Text = "Aries";
-			}*/
+				edi.Text = "Gemini";
+			}
+			else if (e.NewDate.Month >= 6 && e.NewDate.Day <= 21 && e.NewDate.Month <= 7 && e.NewDate.Day <= 22)
+			{
+				edi.Text = "Cancer";
+			}
+			else if (e.NewDate.Month >= 7 && e.NewDate.Day <= 23 && e.NewDate.Month <= 8 && e.NewDate.Day <= 22)
+			{
+				edi.Text = "Leo";
+			}
+			else if (e.NewDate.Month >= 8 && e.NewDate.Day <= 23 && e.NewDate.Month <= 9 && e.NewDate.Day <= 22)
+			{
+				edi.Text = "Virgo";
+			}
+			else if (e.NewDate.Month >= 9 && e.NewDate.Day <= 23 && e.NewDate.Month <= 10 && e.NewDate.Day <= 22)
+			{
+				edi.Text = "Libra";
+			}
+			else if (e.NewDate.Month >= 10 && e.NewDate.Day <= 23 && e.NewDate.Month <= 11 && e.NewDate.Day <= 21)
+			{
+				edi.Text = "Scorpio";
+			}
+			else if (e.NewDate.Month >= 11 && e.NewDate.Day <= 22 && e.NewDate.Month <= 12 && e.NewDate.Day <= 21)
+			{
+				edi.Text = "Sagittarius";
+			}
+			else if (e.NewDate.Month >= 12 && e.NewDate.Day <= 22 && e.NewDate.Month <= 1 && e.NewDate.Day <= 19)
+			{
+				edi.Text = "Capricorn";
+			}
 			//edi.Text = e.NewDate.ToString("dd/MM");
 
 		}
